@@ -51,8 +51,10 @@ const LoginForm = props => {
                                 onChange={event=>{setEnteredPassword(event.target.value)}} />
                         </Form.Group>
                         <div>
-                        <Link to={"/chat"} > 
-                            <div className="btn" style={{textAlign:'center'}}><p>Log In</p></div>
+                        <Link to={"/chat"} > <div style={{display:'flex',flexDirection:'column'}}>
+                        <div className="btn" style={{textAlign:'center'}}><p>Log In</p></div>
+                        </div>
+                            
                         </Link>
                         </div>                        
                     </>}
