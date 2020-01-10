@@ -10,9 +10,16 @@ const ChatInput = props => {
     console.log(enteredMessage)
 
     const sendMessageHandler = () => {
-        setMessage(currentMessages => [...currentMessages, { id: Math.random().toString(), user: 'You', content: enteredMessage, reaction: '' }])
+        setMessage(currentMessages => [...currentMessages,
+            { 
+                id: Math.random().toString(), 
+                user: 'You', 
+                content: enteredMessage, 
+                reaction: '' }])
+
         console.log(message);
         setEnteredMessage('');
+        
     }
 
     const [checked, setChecked] = useState(false);
@@ -54,7 +61,6 @@ const ChatInput = props => {
             <div className="input">
                 <footer style={{ marginTop:"10px"}}>
                 <div style={{display:'flex', justifyContent:'flexStart', marginBottom:10}}>
-                     {/*<input onChange={event => setEnteredMessage(event.target.value)}></input><Button onClick={sendMessageHandler}>Enviar</Button>*/}
                     <input size="59" onChange={event=>setEnteredMessage(event.target.value)}></input><Button onClick={sendMessageHandler}>Enviar</Button>
                 </div>
                    

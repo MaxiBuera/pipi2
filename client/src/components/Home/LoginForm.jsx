@@ -36,11 +36,11 @@ const LoginForm = props => {
                 <Form onSubmit={submitHandler} style={{display:'flex',flexDirection:'column'}}>
  
                     <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
+                        <Form.Label className="text-muted">We'll be sending a security code to your e-mail soon to log in</Form.Label>
                         <Form.Control required type="email" placeholder="Enter email" value={enteredEmail}
                         onChange={event=>{setEnteredEmail(event.target.value)}}/>
                     </Form.Group>
- 
+  
                     {withEmail===false ?  <> 
                         
                         <div className="btn" onClick={()=>emailHandler()}><p>Send Me Code</p></div>
